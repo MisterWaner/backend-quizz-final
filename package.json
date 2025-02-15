@@ -1,0 +1,27 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "backend for a quizz app",
+    "license": "ISC",
+    "author": "E. Soulas",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "start": "node dist/app.js",
+        "dev": "concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"nodemon -r dotenv/config dist/server.js\" "
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.4",
+        "nodemon": "^3.1.9",
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.7.3"
+    },
+    "dependencies": {
+        "@types/express": "^5.0.0",
+        "concurrently": "^9.1.2",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2"
+    }
+}
