@@ -1,26 +1,25 @@
+import { SubjectType } from './subject';
+
 export class Question {
-    constructor(public id: number, public type: string, public text: string) {
+    constructor(
+        public id: number,
+        public type: SubjectType,
+        public text: string
+    ) {
         this.id = id;
         this.type = type;
         this.text = text;
     }
-
-    static generateRandomQuestion() {
-    }
-
-    static getCorrectAnswer() {}
 }
 
 export class MultipleChoiceQuestion extends Question {
     constructor(
         id: number,
         text: string,
-        type: string,
+        type: SubjectType,
         public choices: string[]
     ) {
-        super(
-            id, type, text
-        );
+        super(id, type, text);
         this.choices = choices;
     }
 }

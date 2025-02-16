@@ -10,12 +10,10 @@ export class Subject {
 }
 
 export class SubjectType {
-
     subject: Subject;
     constructor(public id: number, public name: string, subject: Subject) {
         this.id = id;
         this.name = name;
         this.subject = subject;
     }
-    
 }

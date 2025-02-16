@@ -11,7 +11,7 @@ export class User {
         this.password = password;
     }
 
-    static async createAccount(username: string, password: string) {
+    static async createAccount(username: string, password: string): Promise<User> {
         const id = await getNanoid();
 
         return new User(id, username, password);

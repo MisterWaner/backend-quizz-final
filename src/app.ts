@@ -1,19 +1,16 @@
 //imports
-import express, {Request, Response} from "express";
-import { config } from "dotenv";
-
+import Fastify from 'fastify';
+import { config } from 'dotenv';
 
 config();
 
-const app = express();
+const fastify = Fastify({ logger: true });
 
 //Middlewares
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 //Routes
-app.get('/', (req: Request, res: Response) => {
-    res.send('API démarrée et fonctionnelle');
+fastify.get('/', (request, reply) => {
+    reply.send('API démarrée et fonctionnelle');
 });
 
-export default app;
+export default fastify;

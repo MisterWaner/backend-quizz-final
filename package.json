@@ -19,10 +19,12 @@
         "typescript": "^5.7.3"
     },
     "dependencies": {
-        "@types/express": "^5.0.0",
+        "@types/better-sqlite3": "^7.6.12",
+        "better-sqlite3": "^11.8.1",
         "concurrently": "^9.1.2",
         "dotenv": "^16.4.7",
-        "express": "^4.21.2",
+        "fastify": "^5.2.1",
+        "http-errors": "^2.0.0",
         "nanoid": "^5.1.0"
     }
 }
