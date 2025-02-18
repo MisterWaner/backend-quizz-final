@@ -1,6 +1,7 @@
 import { getNanoid } from "@/lib/helpers";
+import { IUser } from "@domain/types";
 
-export class User {
+export class User implements IUser {
     constructor(
         public id: string,
         public username: string,
