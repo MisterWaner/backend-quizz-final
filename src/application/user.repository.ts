@@ -1,4 +1,4 @@
-import { User } from '@domain/user/user';
+import { User } from '@/domain/user';
 
 export interface UserRepository {
     findById(id: string): Promise<User | null>;
@@ -11,4 +11,3 @@ export interface UserRepository {
     loggin(username: string, password: string): Promise<User | null>;
     logout(id: string): Promise<void>;
 }
-

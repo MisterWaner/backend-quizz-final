@@ -1,4 +1,4 @@
-import { User } from '@domain/user/user';
+import { User } from '@/domain/user';
 import { UserRepository } from '@application/user.repository';
 import { comparePassword, hashPassword } from '@/lib/helpers';
 

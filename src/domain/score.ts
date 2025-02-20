@@ -1,5 +1,6 @@
-import { User } from '@domain/user/user';
-import { Subject, SubjectType } from '@domain/quizz/subject';
+import { User } from '@/domain/user';
+import { Branch } from '@/domain/branch';
+import { Subject } from '@/domain/subject';
 
 export class Score {
     constructor(
@@ -8,7 +9,7 @@ export class Score {
         public date: Date,
         public user: User,
         public subject: Subject,
-        public type: SubjectType
+        public type: Branch
     ) {
         this.id = id;
         this.value = value;
